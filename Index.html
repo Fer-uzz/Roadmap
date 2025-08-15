@@ -1,0 +1,245 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roadmap: Curso HTML & CSS</title>
+  <meta name="description" content="Mapa de aprendizaje estático: cursos de HTML y CSS." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">RC</div>
+      <div>
+        <h1>Roadmap: HTML &amp; CSS</h1>
+        <p class="muted">En esta web aprenderas los 2 lenguajes basicos de todo programador — contenido esencial y habilidades especificas para tu cv</p>
+      </div>
+    </header>
+    
+    <main>
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero">
+      <div class="hero-text">
+        <h2>Aprende HTML y CSS desde cero — roadmap </h2>
+        <p class="muted">Dos cursos (HTML y CSS). Cada curso describe habilidades que desarrollarás y contiene una recopilación de todos los temas que necesitas dominar, con ejemplos y pequeñas imágenes .</p>
+      </div>
+      <div class="hero-ill">
+        <!-- simple SVG illustration -->
+        <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="8" width="38" height="56" rx="6" fill="#0ea5a3" opacity="0.95"/>
+          <rect x="44" y="8" width="72" height="56" rx="6" fill="#7c3aed" opacity="0.9"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Curso: HTML — Fundamentos</h3>
+        <p class="muted">Estructura del documento, etiquetas esenciales, accesibilidad y buenas prácticas.</p>
+        <div class="skills">
+          <span class="skill">Etiquetas semánticas</span>
+          <span class="skill">Formularios</span>
+          <span class="skill">Accesibilidad (a11y)</span>
+          <span class="skill">SEO básico</span>
+        </div>
+        <a class="btn" href="#html-course">Ver temario</a>
+        <button class="courses">  <a class="btn" href="curso.html" class="btn">📘 Curso HTML</a>
+
+</button>
+      </article>
+
+      <article class="card">
+        <h3>Curso: CSS — Diseño y layout</h3>
+        <p class="muted">Diseño visual, layouts modernos, responsive, Flexbox, Grid y animaciones sencillas.</p>
+        <div class="skills">
+          <span class="skill">Flexbox</span>
+          <span class="skill">Grid</span>
+          <span class="skill">Responsive</span>
+          <span class="skill">Variables (custom properties)</span>
+        </div>
+        <a class="btn" href="#css-course">Ver temario</a>
+        <button class="courses"><a class="btn" href="css.html">🎨 Curso CSS</a></button>
+      </article>
+
+      <article class="card">
+        <h3>Cómo usar esta web</h3>
+        <p class="muted">Haz click en "Ver temario" para saltar a la sección del curso. Cada sección contiene una lista ordenada de contenidos, descripciones y ejemplos cortos (imágenes incluidas).</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- HTML COURSE -->
+  <section id="html-course" class="page">
+    <a class="btn" href="#home">← Volver</a>
+    <h2 style="margin-top:14px">Curso Completo — HTML</h2>
+    <p class="muted">Descripción: En este curso encontrarás todo lo necesario para crear la estructura de páginas web accesibles y semánticas.</p>
+
+    <div class="content" style="margin-top:16px">
+      <div>
+        <article class="outline">
+          <h4>Habilidades que desarrollarás</h4>
+          <ul style="margin:8px 0 0 18px;color:var(--muted)">
+            <li>Construir páginas semánticas y estructuradas</li>
+            <li>Crear formularios funcionales</li>
+            <li>Optimizar contenido para búsqueda básica (SEO)</li>
+            <li>Usar buenas prácticas de accesibilidad (a11y)</li>
+          </ul>
+        </article>
+
+        <article class="outline" style="margin-top:12px">
+          <h4>Temario — contenidos</h4>
+
+          <div class="topic">
+            <h5>1. Estructura básica</h5>
+            <p class="muted">doctype, html, head, body, meta charset, viewport, title.</p>
+          </div>
+
+          <div class="topic">
+            <h5>2. Etiquetas semánticas</h5>
+            <p class="muted">header, nav, main, section, article, aside, footer, h1-h6, p, figure, figcaption.</p>
+          </div>
+
+          <div class="topic">
+            <h5>3. Enlaces e imágenes</h5>
+            <p class="muted">a, img (alt), srcset, picture, lazy loading.</p>
+          </div>
+
+          <div class="topic">
+            <h5>4. Listas, tablas y contenido agrupado</h5>
+            <p class="muted">ul, ol, dl, table, thead, tbody, th, td — cuándo usar tablas.</p>
+          </div>
+
+          <div class="topic">
+            <h5>5. Formularios</h5>
+            <p class="muted">form, input, textarea, select, labels, fieldset, validation, atributos ARIA básicos.</p>
+          </div>
+
+          <div class="topic">
+            <h5>6. Accesibilidad</h5>
+            <p class="muted">atributos alt, role, aria-label, focus order, semantic HTML para lectores de pantalla.</p>
+          </div>
+
+          <div class="topic">
+            <h5>7. Buenas prácticas</h5>
+            <p class="muted">nombres de clases legibles, estructura limpia, comentarios, optimización de imágenes y rendimiento.</p>
+          </div>
+
+        </article>
+
+      </div>
+
+      <aside>
+        <div class="outline">
+          <h4>Ejemplos visuales</h4>
+          <p class="muted">Estructura básica (mini-diagrama):</p>
+          <pre style="background:#071226;padding:10px;border-radius:8px;color:#a7b4c7;font-size:13px;margin-top:8px">&lt;!doctype html&gt;
+
+<html> <head>...</head> <body> <header>...</header> <main>...</main> <footer>...</footer> </body> </html></pre> </div>
+
+<div class="outline" style="margin-top:12px">
+          <h4>Recursos rápidos</h4>
+          <ul style="color:var(--muted);margin:6px 0 0 18px">
+            <li>Practica con pequeñas páginas estáticas</li>
+            <li>Valida tu HTML en validators.w3.org</li>
+            <li>Usa texto alternativo descriptivo en imágenes</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+  </section>
+
+  <!-- CSS COURSE -->
+  <section id="css-course" class="page">
+    <a class="btn" href="#home">← Volver</a>
+    <h2 style="margin-top:14px">Curso Completo — CSS</h2>
+    <p class="muted">Descripción: Todo lo necesario para llevar la estructura HTML a una interfaz atractiva, responsive y moderna.</p>
+
+    <div class="content" style="margin-top:16px">
+      <div>
+        <article class="outline">
+          <h4>Habilidades que desarrollarás</h4>
+          <ul style="margin:8px 0 0 18px;color:var(--muted)">
+            <li>Diseñar páginas responsivas y accesibles</li>
+            <li>Dominar modelos de layout: Flexbox y Grid</li>
+            <li>Crear diseños modernos con variables y utilidades</li>
+            <li>Usar animaciones y transiciones con moderación</li>
+          </ul>
+        </article>
+
+        <article class="outline" style="margin-top:12px">
+          <h4>Temario — contenidos</h4>
+
+          <div class="topic">
+            <h5>1. Sintaxis y selectores</h5>
+            <p class="muted">selectores de tipo, clase, id, combinadores, pseudo-clases y pseudo-elementos.</p>
+          </div>
+
+          <div class="topic">
+            <h5>2. Box model y unidades</h5>
+            <p class="muted">margin, padding, border, box-sizing, px, rem, em, %, vw, vh.</p>
+          </div>
+
+          <div class="topic">
+            <h5>3. Flexbox</h5>
+            <p class="muted">layout unidimensional: justify, align, order, wrap.</p>
+          </div>
+
+          <div class="topic">
+            <h5>4. Grid</h5>
+            <p class="muted">layout bidimensional: grid-template, areas, gap, auto-placement.</p>
+          </div>
+
+          <div class="topic">
+            <h5>5. Responsive design</h5>
+            <p class="muted">media queries, mobile-first, breakpoints y patrones comunes.</p>
+          </div>
+
+          <div class="topic">
+            <h5>6. Variables y organización</h5>
+            <p class="muted">custom properties, metodología BEM (opcional), arquitectura de CSS.</p>
+          </div>
+
+          <div class="topic">
+            <h5>7. Animaciones y transiciones</h5>
+            <p class="muted">transitions, keyframes, performance y cuándo evitar animar propiedades costosas.</p>
+          </div>
+
+        </article>
+
+      </div>
+
+      <aside>
+        <div class="outline">
+          <h4>Ejemplos visuales</h4>
+          <p class="muted">Snippet: Grid simple</p>
+          <pre style="background:#071226;padding:10px;border-radius:8px;color:#a7b4c7;font-size:13px;margin-top:8px">.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }</pre>
+        </div>
+
+        <div class="outline" style="margin-top:12px">
+          <h4>Recursos rápidos</h4>
+          <ul style="color:var(--muted);margin:6px 0 0 18px">
+            <li>Prueba ejemplos en CodePen o en tu editor local</li>
+            <li>Usa DevTools para inspeccionar layouts</li>
+            <li>Lee la guía de Flexbox y Grid para dominar casos reales</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+  </section>
+
+  <footer>
+    <strong>Disclaimer: Toma estos cursos mas como una guia inicial en tu camino como programador.</strong> <br>
+    The elite programer roadmap. &copy;   all rights reserved to Luis Fernando Baez guzman.
+  </footer>
+
+</main>
+
+  </div>
+</body>
+</html>

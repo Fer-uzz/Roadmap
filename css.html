@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Curso de CSS</h1>
+        <p>Domina CSS desde lo básico hasta técnicas avanzadas</p>
+        <nav>
+            <a href="index.html" class="btn">⬅ Volver al inicio</a>
+        </nav>
+    </header>
+
+    <main class="course-content">
+
+        <section>
+            <h2>Módulo 1: Introducción a CSS</h2>
+            <p>CSS (Cascading Style Sheets) es el lenguaje que define
+                 la apariencia visual de las páginas web.
+                  Se encarga de colores, tipografía, disposición, 
+                  animaciones y mucho más.</p>
+
+                <h3> ¿Qué puede hacer CSS? </h3> 
+<ul>
+<li>Cambiar colores de fondo y texto.</li>
+<li>Definir tamaños de letras, imágenes y cajas.</li>
+<li>Organizar el contenido con márgenes, espaciados y alineaciones.</li>
+<li>Crear formas, animaciones y transiciones.</li>
+<li>Adaptar la página para que se vea bien en celulares, tablets y PC.</li>
+</ul>
+            <h3>Formas de aplicar CSS</h3>
+            <ul>
+                <li><strong>En línea:</strong> usando el atributo <code>style</code> directamente en una etiqueta.</li>
+                <li><strong>Interno:</strong> con la etiqueta <code>&lt;style&gt;</code> dentro del <code>&lt;head&gt;</code>.</li>
+                <li><strong>Externo:</strong> vinculando un archivo <code>.css</code> con <code>&lt;link&gt;</code>.</li>
+            </ul>
+        <span>La mejor forma es vinculando tu archivo css externo al <code>&lt;head&gt;</code> de tu html</span>
+            <pre>
+&lt;link rel="stylesheet" href="style.css"&gt;
+            </pre>
+            <p>Esto Permite tener tu codigo limpio y organizado.</p>
+        </section>
+
+        <section>
+            <h2>Módulo 2: Selectores y propiedades</h2>
+            <p>Un selector indica qué elementos se van a estilizar, y las propiedades definen el estilo.
+                <br>Basicamente seleccionas el elemento al que le vas a dar estilo y lo estilizas modificando propiedades.
+            </p>
+            <pre>
+/* Selector por etiqueta */
+p { color: blue; }
+
+ <span>Todos los p de tu html tendran el color azul.</span>
+
+/* Selector por clase */
+.texto-rojo { color: red; }
+
+    <span>Seleccionas tu etiqueta por la clase que le diste <br>
+        (En HTML, una clase es una forma de ponerle una etiqueta especial a un elemento para poder identificarlo
+         y aplicarle estilos con CSS o manipularlo con JavaScript.
+        Se crea con el atributo class dentro de una etiqueta.)
+    </span>
+
+/* Selector por id */
+#titulo { font-size: 24px; }
+
+<span>Seleccionas el elemento por el id que le agregaste [Si lo hiciste], <br>
+Un id es basicamente un identificador que le das a un unico elemento html.</span>
+
+/* Selector múltiple */
+h1, h2 { font-weight: bold; }
+
+<span>Seleccionas varias etiquetas a la vez para darles el mismo estilo.</span>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Módulo 3: Colores y fondos</h2>
+            <p>CSS admite colores por nombre, HEX, RGB, RGBA, HSL, HSLA.</p>
+            <p>Perfecto, vamos entonces al **concepto puro** de *colores y fondos en CSS*, explicado para que lo entiendas de raíz sin tanto código decorativo.
+
+<h3>Colores en CSS </h3>
+
+<h4>En CSS, el color se aplica principalmente a dos cosas</h4>
+<ol>
+<li>Color de texto → con `color`</li>
+<li>Color de fondo → con `background-color`</li>
+
+<p>Un color en CSS no es más que una forma de decirle al navegador: 
+
+ “Pinta este elemento usando este valor específico de color.”
+</p>
+<h4>Ese valor puede estar escrito de varias formas:</h4>
+<ul>
+<li>Por nombre: `red`, `blue`, `green` (CSS tiene una lista fija de nombres reconocidos).</li>
+<li>Por código HEX: `#RRGGBB` (rojo, verde, azul en formato hexadecimal).</li>
+<li>Por RGB: valores de 0 a 255 para rojo, verde y azul.</li>
+<li>Por HSL: tono, saturación y luminosidad, más fácil para generar variaciones.</li>
+<li>Con alfa/transparencia**: usando RGBA o HSLA para añadir opacidad.</li>
+</ul>
+
+<h4>Importante:</h4>
+<ul>
+<li>El color afecta solo la propiedad que modifiques (`color` para texto, `background-color` para fondo, `border-color` para bordes, etc.).</li>
+<li>CSS separa siempre el contenido (texto) del fondo. Cambiar uno no cambia automáticamente el otro.</li>
+</ul>
+
+<h3>Fondos en CSS </h3>
+
+<p>En CSS, el fondo es todo lo que está detrás del contenido de un elemento.
+Se controla con la propiedad `background` y sus variantes (`background-color`, `background-image`, etc.).
+
+Un fondo puede ser:
+</p>
+<ul>
+<li>Un color sólido (`background-color`).</li>
+<li>Una imagen (`background-image`). </li>
+<li>Un gradiente (que en realidad es tratado como una imagen generada por CSS).</li>
+<li>Una combinación de varios (capas).</li>
+</ul>
+
+<span>Nota:</span>
+<p>El fondo</p>
+<ul>
+</li>No afecta el texto directamente; el texto se dibuja encima.</li>
+</li>Puede repetirse, moverse o cambiar de tamaño.</li>
+</li>Puede ser fijo al desplazarse la página o moverse con el contenido.</li>
+</ul>
+
+<h3> Diferencia clave</h3>
+
+<li>Color = propiedad visual de un elemento o su texto.</li>
+<li>Fondo = “lienzo” sobre el que se coloca todo el contenido del elemento. </li>
+
+<h4>Ejemplo conceptual</h4>
+Imagina una tarjeta:
+<ul>
+ <li>El color de texto es como el color de la tinta con la que escribes.</li>
+<li></li> El color/fondo es como el papel o tela sobre el que escribes.</li>
+</ul>
+
+
+</p>
+            <pre>
+body {
+    background-color: #f0f0f0;
+}
+.titulo {
+    color: rgb(255, 0, 0);
+}
+.caja {
+    background: linear-gradient(to right, #ff0000, #0000ff);
+}
+            </pre>
+        </section>
+
+        <section>
+
+            <h2>Módulo 4: Tipografía</h2>
+            <p>Podemos cambiar el tipo de letra, tamaño, peso y espaciado.</p>
+<p>CSS nos da propiedades para controlar todos estos aspectos y así hacer que el texto sea legible,
+     atractivo y coherente con el diseño. </p>
+
+<h3>Propiedades principales de tipografía</h3>
+<ul>
+<li>font-family → Define la fuente que se usará.
+Puede ser genérica (serif, sans-serif, monospace) o específica ("Arial", "Times New Roman").
+Es común usar una lista de varias fuentes para que el navegador use la primera disponible.</li>
+<li>font-size → El tamaño del texto.
+Puede ser en píxeles (px), unidades relativas (em, rem) o porcentajes (%).</li>
+<li>font-weight → Grosor de la letra.
+Valores comunes: normal, bold, o números de 100 a 900.</li>
+<li>line-height → Espacio vertical entre líneas de texto.
+Importante para la legibilidad, especialmente en párrafos largos.</li>
+<li>letter-spacing → Espacio entre letras.
+word-spacing → Espacio entre palabras.</li>
+<li>text-align → Alineación horizontal del texto (left, right, center, justify).
+text-decoration → Decoraciones como subrayado (underline), tachado (line-through) o ninguna (none).</li>
+<li>text-transform → Cambia el caso del texto (uppercase, lowercase, capitalize).</li>
+</ul>
+<h3> Conceptos clave</h3>
+<ol>
+<li>Legibilidad: No todo es estilo; el objetivo principal es que el texto se lea bien.</li>
+<li>Consistencia: Usar las mismas fuentes y tamaños en elementos similares.</li>
+<li>Jerarquía visual: Diferenciar títulos, subtítulos y cuerpo de texto para guiar la lectura.</li>
+<li>Compatibilidad: No todas las fuentes están disponibles en todos los dispositivos; por eso se usan “familias” con alternativas.</li>
+</ol>
+            <pre>
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+            </pre>
+        </section>
+
+        <section>
+            <h2>Módulo 5: Modelo de caja (Box Model)</h2>
+            <p>Todo elemento HTML se representa como una caja que contiene:</p>
+            <ul>
+                <li><strong>Content</strong> – El contenido (texto, imagen, etc.)</li>
+                <p><em>Es lo que realmente se muestra: texto, imágenes, video, etc.
+                   Su tamaño se define con width y height.</em></p>
+                <li><strong>Padding</strong> – Espacio interno</li>
+                <p><em>Espacio entre el contenido y el borde.
+                      Es como el “aire” o “acolchado” que evita que el contenido toque el borde.</em></p>
+                <li><strong>Border</strong> – Borde alrededor</li>
+                <p><em>Línea que envuelve el contenido y el relleno.
+                    Puede tener grosor, color y estilo (solid, dashed, dotted).</em></p>
+                <li><strong>Margin</strong> – Espacio externo</li>
+                <p><em>Espacio entre la caja y otras cajas (elementos).
+                       Es como el espacio que deja la caja respecto a su alrededor.</em></p>
+            </ul>
+            <pre>
+.caja {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 10px;
+}
+            </pre>
+        </section>
+
+        <section>
+            <h2>Módulo 6: Flexbox</h2>
+            <p>Flexbox (Flexible Box Layout) es un sistema de diseño en CSS que organiza y distribuye elementos en una sola dimensión:
+<ul>
+<li>Fila (horizontal)</li>
+<li>Columna (vertical)</li>
+</ul>
+Se diseñó para resolver problemas comunes de alineación y espacio que antes eran muy difíciles con solo float o inline-block.
+Basicamente Flexbox es un “contenedor inteligente” que sabe acomodar sus hijos para que se ajusten, se alineen y se distribuyan de forma eficiente, incluso si el tamaño de la pantalla cambia.</p>
+            <pre>
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+            </pre>
+        </section>
+
+        <section>
+            <h2>Módulo 7: Grid</h2>
+            <p>
+ CSS Grid Layout es un sistema de diseño bidimensional en CSS.
+Esto significa que puede organizar elementos en filas y columnas al mismo tiempo, algo que Flexbox no hace tan fácilmente.
+La idea clave es que defines una rejilla (grid) dentro de un contenedor, y luego colocas elementos en las “celdas” que quieras.
+<br>
+📌 Piensa en una hoja de Excel:
+El contenedor es la hoja. <br>
+Las filas y columnas son el grid. <br>
+Cada celda es donde puedes poner contenido.
+
+<h3>Concepto clave: contenedor y elementos de la grid
+</h3>
+<ul>
+<li>Contenedor Grid</li>
+<p>
+Es un elemento al que aplicas:
+display: grid;
+Se convierte en el "marco" donde se define la estructura de filas y columnas.
+</p>
+<li>Elementos de la Grid</li>
+<p>
+Son los hijos directos del contenedor.
+Cada hijo ocupa una o más celdas.
+</p>
+
+<h3>Cómo se define la estructura</h3>
+
+<span>En el contenedor puedes definir:</span>
+<ul>
+<li>grid-template-columns → Número y tamaño de las columnas.</li>
+
+<li>grid-template-rows → Número y tamaño de las filas.</li>
+
+<h4>Ejemplos de tamaños que puedes usar:</h4>
+<ol>
+<li>Unidades fijas (px, em).
+
+<li>Porcentajes (%).
+
+<li>Fracciones (fr) → espacio relativo que queda libre.</li>
+
+<li>Automático (auto) → se ajusta al contenido.</li>
+
+<li>Funciones como minmax() o repeat() para ahorrar código.</li>
+</ol>
+            <pre>
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+            </pre>
+        </section>
+
+        <section>
+            <h2>Módulo 8: Animaciones y transiciones</h2>
+            <p>CSS permite animar elementos y suavizar cambios.
+                En CSS hay dos formas principales de crear movimiento:
+<ol>
+<li>Transiciones (transition)</li>
+<p>Animan cambios entre dos estados.
+Necesitan que algo cambie (ej: hover, click, cambio de clase en JS).
+Se usan para suavizar la transformación o el cambio de una propiedad.</p>
+
+<li>Animaciones (@keyframes)
+Permiten crear movimientos complejos y repetitivos.
+No necesitan un evento para comenzar (pueden iniciar solas).
+Controlan múltiples pasos intermedios, no solo un cambio inicial/final.</li>
+            </p>
+
+            <pre>
+.boton {
+    background: blue;
+    transition: background 0.3s ease;
+}
+.boton:hover {
+    background: darkblue;          (Con esta transition estas cambiando el color del boton.)
+}
+  
+@keyframes mover {
+    from { transform: translateX(0); }
+    to { transform: translateX(100px); }
+}
+.caja {
+    animation: mover 2s infinite alternate;      (Con esta animacion esta moviendo un elemento (caja))
+}
+            </pre>
+        </section>
+    <section>
+        <p>En este curso rapido, aprendiste habilidades basicas claves para desarrollar una Base fuerte en css.</p>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Curso CSS - Todos los derechos reservados a Luis Fernando Baez Guzman</p>
+    </footer>
+</body>
+</html>

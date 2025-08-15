@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Curso de HTML</h1>
+        <p>Aprende las Bases del HTML desde cero</p>
+        <nav>
+            <a href="index.html" class="btn">⬅ Volver al inicio</a>
+        </nav>
+    </header>
+
+    <main class="course-content">
+
+        <section>
+            <h2>Módulo 1: Introducción a HTML</h2>
+            <p>HTML (HyperText Markup Language) es el lenguaje de marcado que da estructura al contenido en la web. No es un lenguaje de programación, sino un conjunto de etiquetas que indican al navegador cómo mostrar el contenido.</p>
+            <h3>Historia breve</h3>
+            <p>Fue creado por Tim Berners-Lee en 1991 como una forma de enlazar documentos científicos. Con el tiempo evolucionó hasta HTML5, que es la versión actual.</p>
+            <h3>Estructura básica</h3>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Mi página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hola mundo&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            <p>El <code>&lt;!DOCTYPE html&gt;</code> indica que usamos HTML5. El elemento <code>&lt;html&gt;</code> encierra todo el contenido. Dentro, <code>&lt;head&gt;</code> contiene metadatos y <code>&lt;body&gt;</code> el contenido visible.
+           <br> PD: ("es importante que uses <code>&lt;!DOCTYPE html&gt; ya que al ser este la ultima version de html y contar con <br>Metadatos posiciona y optimiza tu web de la mejor manera</code>")</p>
+        </section>
+
+        <section>
+            <h2>Módulo 2: Etiquetas de texto</h2>
+            <p>Las etiquetas de texto permiten organizar y dar formato al contenido. Algunas comunes son:</p>
+            <ul>
+                <li><code>&lt;h1&gt;...&lt;/h1&gt;</code> a <code>&lt;h6&gt;...&lt;/h6&gt;</code> – Títulos y subtítulos.</li>
+                <li><code>&lt;p&gt;</code> – Párrafos.</li>
+                <li><code>&lt;strong&gt;</code> – Texto en negrita.</li>
+                <li><code>&lt;em&gt;</code> – Texto en cursiva.</li>
+                <li><code>&lt;u&gt;</code> – Subrayado.</li>
+            </ul>
+            <p>Ejemplo:</p>
+            <pre>
+&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;p&gt;Este es un párrafo con &lt;strong&gt;negrita&lt;/strong&gt; y &lt;em&gt;cursiva&lt;/em&gt;.&lt;/p&gt;
+<p>Aqui no hay mucho que abundar, estas etiquetas simplemente te permitiran organizar tu contenido 
+de la mejor manera. <br> PD: (Aunque muchas pueden cumplir la misma funcion es imortante usar las etiquetas especificas para cada accion.)</p>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Módulo 3: Listas y enlaces</h2>
+            <p>Las listas pueden ser ordenadas o no ordenadas:</p>
+            <pre>
+                <h3>UL= Unordered list (Lista no Ordenanda.)</h3>
+&lt;ul&gt; 
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;/ul&gt;
+<p>Esta clase de lista es util cuando no necesitas enumerar los items.</p>
+<h3>Ordered list (Lista ordenada)</h3>
+<p>El nombre lo dice, esta clase de lista te servira cuando tienes que ordenar los items.</p>
+&lt;ol&gt;
+    &lt;li&gt;Primero&lt;/li&gt;
+    &lt;li&gt;Segundo&lt;/li&gt;
+&lt;/ol&gt;
+            </pre>
+            <p>Los enlaces se crean con <code>&lt;a&gt;</code>:</p>
+            <pre>
+&lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;
+<span>TIPS: Un enlace puede ser un boton/ un texto/ una imagen, todo dependera de lo que necesites.</span>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Módulo 4: Imágenes y multimedia</h2>
+            <p>Podemos insertar imágenes con <code>&lt;img&gt;</code>:</p>
+            <pre>
+&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+            </pre>
+            <p>Para videos y audio:</p>
+            <pre>
+&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Módulo 5: Formularios</h2>
+            <p>Permiten recopilar información del usuario.</p>
+            A nivel básico en HTML, un formulario es simplemente una parte
+             de la página que permite a las personas escribir o seleccionar información para enviarla.
+             <br>Dentro lleva campos (como cajas de texto, botones, listas) para
+              que el usuario los llene.
+            Cuando el usuario presiona el botón de enviar, 
+la información va a un lugar (el servidor o un programa) para ser procesada.
+<span>Basicamente la informacion se va a una "nube" o otro software donde decidas guardar la info recopilada (Estos son temas par otro nivel de programacion.)</span>
+            <pre>
+&lt;form action="/procesar" method="post"&gt;
+    &lt;label&gt;Nombre: &lt;input type="text" name="nombre"&gt;&lt;/label&gt;
+    &lt;label&gt;Correo: &lt;input type="email" name="correo"&gt;&lt;/label&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+            </pre>
+        </section>
+<section>
+    <h2> Overview</h2>
+    <P>En este Roadmap aprendiste los principales y mas usados conceptos de HTML adquiriendo una base solida del Lenguage de una manera rapida y concisa.,
+        <br>Con estos contenidos bien aplicados pueder ser capaz de estructurar paginas web simples y de mas adelante, entender conceptos mas avanzados.
+    </P>
+    <span>(PD: Aplica estos contenidos mientras los estudias es la mejor forma de aprender,
+        utiliza videos de youtube si un concepto no quedo claro, esta pagina mas que un curso es un ROADMAP de las tecnologias que tienes que dominar para tener una estructura fuerte en el lenguage.)</span>
+</section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Curso HTML - Todos los derechos reservados Luis Fernando Baez guzman</p>
+    </footer>
+</body>
+</html>
